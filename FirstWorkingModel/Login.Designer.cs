@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_Username = new System.Windows.Forms.TextBox();
+            this.txt_Password = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_Login = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txt_Username
             // 
-            this.textBox1.Location = new System.Drawing.Point(183, 89);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(247, 22);
-            this.textBox1.TabIndex = 0;
+            this.txt_Username.Location = new System.Drawing.Point(183, 89);
+            this.txt_Username.Name = "txt_Username";
+            this.txt_Username.Size = new System.Drawing.Size(247, 22);
+            this.txt_Username.TabIndex = 0;
             // 
-            // textBox2
+            // txt_Password
             // 
-            this.textBox2.Location = new System.Drawing.Point(183, 160);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(247, 22);
-            this.textBox2.TabIndex = 1;
+            this.txt_Password.Location = new System.Drawing.Point(183, 160);
+            this.txt_Password.Name = "txt_Password";
+            this.txt_Password.Size = new System.Drawing.Size(247, 22);
+            this.txt_Password.TabIndex = 1;
             // 
             // label1
             // 
@@ -77,7 +77,7 @@
             this.btn_Login.UseVisualStyleBackColor = true;
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
-            // Form1
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -85,9 +85,9 @@
             this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Name = "Form1";
+            this.Controls.Add(this.txt_Password);
+            this.Controls.Add(this.txt_Username);
+            this.Name = "Login";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -96,8 +96,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_Username;
+        private System.Windows.Forms.TextBox txt_Password;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_Login;
