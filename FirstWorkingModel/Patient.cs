@@ -10,6 +10,7 @@ namespace FirstWorkingModel
     {
         private string m_FirstName;
         private string m_LastName;
+        private string m_PhoneNumber;
         private string m_Address;
         private string m_Postcode;
         private string m_DOB;
@@ -19,12 +20,14 @@ namespace FirstWorkingModel
         public string Address { get { return m_Address; } set { m_Address = value; } }
         public string Postcode { get { return m_Postcode; } set { m_Postcode = value; } }
         public string DOB { get { return m_DOB; } set { m_DOB = value; } }
+        public string PhoneNumber { get { return m_PhoneNumber; } set { m_PhoneNumber = value; } }
 
-        public Patient(string first, string last, string address, string postcode, string dob)
+        public Patient(string first, string last, string address, string phone, string postcode, string dob)
         {
             FirstName = first;
             LastName = last;
             Address = address;
+            PhoneNumber = phone;
             Postcode = postcode;
             DOB = dob;
         }

@@ -20,9 +20,9 @@ namespace FirstWorkingModel
             return m_getInstance;
         }
 
-        public void AddPatient(string first, string last, string address, string postcode, string dob)
+        public void AddPatient(string first, string last, string address, string phone, string postcode, string dob)
         {
-            Patients.Add(new Patient(first, last, address, postcode, dob));
+            Patients.Add(new Patient(first, last, address, phone, postcode, dob));
         }
     }
 }
