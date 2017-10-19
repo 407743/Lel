@@ -15,15 +15,12 @@ namespace FirstWorkingModel
         {
             try
             {
-                // Create an instance of StreamReader to read from a file.
-                // The using statement also closes the StreamReader.
+
                 string fileName = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory() + @"\..\..\patients.csv");
                 Console.WriteLine(fileName);
                 using (StreamReader sr = new StreamReader(fileName))
                 {
                     string line;
-                    // Read and display lines from the file until the end of 
-                    // the file is reached.
                     try
                     {
                         while ((line = sr.ReadLine()) != null)
