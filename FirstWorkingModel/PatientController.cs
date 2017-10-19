@@ -11,7 +11,7 @@ namespace FirstWorkingModel
         private static List<Patient> m_patients = new List<Patient>();
         public List<Patient> Patients { get { return m_patients; } set { m_patients = value; } }
         private static PatientController m_getInstance;
-        public static PatientController getInstance()
+        public static PatientController Instance()
         {
             if (m_getInstance == null)
             {

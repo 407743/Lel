@@ -33,10 +33,12 @@
             this.datagrid_Appointments = new System.Windows.Forms.DataGridView();
             this.tab_Patients = new System.Windows.Forms.TabPage();
             this.btn_NewPatient = new System.Windows.Forms.Button();
+            this.datagrid_Patients = new System.Windows.Forms.DataGridView();
             this.tab_receptionist.SuspendLayout();
             this.tab_Appointments.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_Appointments)).BeginInit();
             this.tab_Patients.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datagrid_Patients)).BeginInit();
             this.SuspendLayout();
             // 
             // tab_receptionist
@@ -67,9 +69,11 @@
             this.datagrid_Appointments.Name = "datagrid_Appointments";
             this.datagrid_Appointments.Size = new System.Drawing.Size(800, 340);
             this.datagrid_Appointments.TabIndex = 0;
+            this.datagrid_Appointments.SelectionChanged += new System.EventHandler(this.datagrid_Appointments_SelectionChanged);
             // 
             // tab_Patients
             // 
+            this.tab_Patients.Controls.Add(this.datagrid_Patients);
             this.tab_Patients.Controls.Add(this.btn_NewPatient);
             this.tab_Patients.Location = new System.Drawing.Point(4, 22);
             this.tab_Patients.Name = "tab_Patients";
@@ -89,6 +93,14 @@
             this.btn_NewPatient.UseVisualStyleBackColor = true;
             this.btn_NewPatient.Click += new System.EventHandler(this.btn_NewPatient_Click);
             // 
+            // datagrid_Patients
+            // 
+            this.datagrid_Patients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagrid_Patients.Location = new System.Drawing.Point(6, 6);
+            this.datagrid_Patients.Name = "datagrid_Patients";
+            this.datagrid_Patients.Size = new System.Drawing.Size(797, 311);
+            this.datagrid_Patients.TabIndex = 1;
+            // 
             // ReceptionistForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -102,6 +114,7 @@
             this.tab_Appointments.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_Appointments)).EndInit();
             this.tab_Patients.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.datagrid_Patients)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -113,5 +126,6 @@
         private System.Windows.Forms.DataGridView datagrid_Appointments;
         private System.Windows.Forms.TabPage tab_Patients;
         private System.Windows.Forms.Button btn_NewPatient;
+        private System.Windows.Forms.DataGridView datagrid_Patients;
     }
 }

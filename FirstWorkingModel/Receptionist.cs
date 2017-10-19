@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 
@@ -13,23 +14,26 @@ namespace FirstWorkingModel
 
         private void Receptionist_Load(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
-            DataColumn dc1 = new DataColumn("Time", typeof(string));
-            DataColumn dc2 = new DataColumn("Patient", typeof(string));
-            DataColumn dc3 = new DataColumn("Doctor", typeof(string));
-            dt.Columns.Add(dc1);
-            dt.Columns.Add(dc2);
-            dt.Columns.Add(dc3);
-            datagrid_Appointments.DataSource = dt;
-            dt.Rows.Add("12:00", "Mr Rogers", "Dr. Steve");
-            dt.Rows.Add("12:10", "Mr Brown", "Dr Ruth");
-            dt.Rows.Add("12:20", "Mrs Green", "Dr Chris");
+            datagrid_Patients.DataSource = DataController.Instance().getPatientData();
         }
 
         private void btn_NewPatient_Click(object sender, EventArgs e)
         {
             new NewPatientForm().Show();
-            Hide();
+        }
+
+        private void datagrid_Appointments_SelectionChanged(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in datagrid_Appointments.SelectedRows)
+            {
+                MessageBox.Show("Appointment selected for " + row.Cells[1].Value.ToString() + " at " + row.Cells[0].Value.ToString() + " with " + row.Cells[2].Value.ToString());
+            }
+        }
+
+        public void RefreshPatientData()
+        {
+            DataController.Instance().InsertPatientData();
+            datagrid_Patients.Refresh();
         }
     }
 }
