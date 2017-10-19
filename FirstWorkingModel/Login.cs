@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FirstWorkingModel
 {
-    public partial class Login : Form
+    public partial class LoginForm : Form
     {
-        public Login()
+        public LoginForm()
         {
             InitializeComponent();
         }
@@ -21,27 +21,58 @@ namespace FirstWorkingModel
         {
             string user = txt_Username.Text.ToLower();
             string password = txt_Password.Text.ToLower();
-            if (password == "password123")
+            switch (user[0])
             {
-                switch (user[0])
-                {
-                    case 'p':
-                        break;
-                    case 'r':
-                        break;
-                    case 'd':
-                        break;
-                    case 'n':
-                        break;
-                    default:
-                        MessageBox.Show("Username not recognized");
-                        break;
-                }
+                case 'p':
+                    if (ValidatePassword(password))
+                    {
+                        new PracticeManagerForm().Show();
+                        Hide();
+
+                    }
+                    break;
+                case 'r':
+                    if (ValidatePassword(password))
+                    {
+                        new ReceptionistForm().Show();
+                        Hide();
+                    }
+                    break;
+                case 'd':
+                    if (ValidatePassword(password))
+                    {
+                        new DoctorForm().Show();
+                        Hide();
+
+                    }
+                    break;
+                case 'n':
+                    if (ValidatePassword(password))
+                    {
+                        new NurseForm().Show();
+                        Hide();
+
+                    }
+                    break;
+                default:
+                    MessageBox.Show("Username not recognized");
+                    break;
+            }
+        }
+
+        bool ValidatePassword(string pass)
+        {
+            bool validated;
+            if(pass=="password")
+            {
+                validated = true;
             }
             else
             {
-                MessageBox.Show("Password incorrect");
+                validated = false;
+                MessageBox.Show("Password Incorrect");
             }
+            return validated;
         }
     }
 }
