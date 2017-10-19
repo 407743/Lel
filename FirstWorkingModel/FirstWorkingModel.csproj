@@ -54,6 +54,7 @@
     <Compile Include="DoctorForm.Designer.cs">
       <DependentUpon>DoctorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FileHandler.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,7 +93,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="patients.csv" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DoctorForm.resx">

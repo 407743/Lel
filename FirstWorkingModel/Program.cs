@@ -15,6 +15,7 @@ namespace FirstWorkingModel
         [STAThread]
         public static void Main()
         {
+            FileHandler.Instance();
             LoginForm login;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
