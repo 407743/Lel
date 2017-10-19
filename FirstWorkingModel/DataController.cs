@@ -57,7 +57,7 @@ namespace FirstWorkingModel
 
         public void InsertPatientData()
         {
-            foreach (Patient p in PatientController.Instance().Patients)
+            Patient p = PatientController.Instance().Patients[PatientController.Instance().Patients.Count - 1];
             {
                 DataTablePatients.Rows.Add(p.FirstName, p.LastName, p.DOB);
             }

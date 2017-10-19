@@ -23,6 +23,7 @@ namespace FirstWorkingModel
         public void AddPatient(string first, string last, string address, string phone, string postcode, string dob)
         {
             Patients.Add(new Patient(first, last, address, phone, postcode, dob));
+            DataController.Instance().InsertPatientData();
         }
     }
 }
