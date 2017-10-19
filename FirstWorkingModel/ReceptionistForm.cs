@@ -7,6 +7,7 @@ namespace FirstWorkingModel
 {
     public partial class ReceptionistForm : Form
     {
+        LoginForm l;
         public ReceptionistForm()
         {
             InitializeComponent();
@@ -15,6 +16,8 @@ namespace FirstWorkingModel
         private void Receptionist_Load(object sender, EventArgs e)
         {
             datagrid_Patients.DataSource = DataController.Instance().getPatientData();
+            datagrid_Appointments.DataSource = DataController.Instance().getAppointmentData();
+            datagrid_Patients.AllowUserToDeleteRows = false;
         }
 
         private void btn_NewPatient_Click(object sender, EventArgs e)
@@ -24,16 +27,12 @@ namespace FirstWorkingModel
 
         private void datagrid_Appointments_SelectionChanged(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in datagrid_Appointments.SelectedRows)
-            {
-                MessageBox.Show("Appointment selected for " + row.Cells[1].Value.ToString() + " at " + row.Cells[0].Value.ToString() + " with " + row.Cells[2].Value.ToString());
-            }
-        }
 
-        public void RefreshPatientData()
+        }
+        private void btn_Logout_Click(object sender, EventArgs e)
         {
-            DataController.Instance().InsertPatientData();
-            datagrid_Patients.Refresh();
+            Close();
+            Show();
         }
     }
 }

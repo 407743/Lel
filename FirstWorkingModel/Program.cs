@@ -13,11 +13,12 @@ namespace FirstWorkingModel
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        public static void Main()
         {
+            LoginForm login;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(login = new LoginForm());
         }
     }
 }

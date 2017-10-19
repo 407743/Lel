@@ -32,8 +32,9 @@
             this.tab_Appointments = new System.Windows.Forms.TabPage();
             this.datagrid_Appointments = new System.Windows.Forms.DataGridView();
             this.tab_Patients = new System.Windows.Forms.TabPage();
-            this.btn_NewPatient = new System.Windows.Forms.Button();
             this.datagrid_Patients = new System.Windows.Forms.DataGridView();
+            this.btn_NewPatient = new System.Windows.Forms.Button();
+            this.btn_Logout = new System.Windows.Forms.Button();
             this.tab_receptionist.SuspendLayout();
             this.tab_Appointments.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_Appointments)).BeginInit();
@@ -83,6 +84,14 @@
             this.tab_Patients.Text = "Patients";
             this.tab_Patients.UseVisualStyleBackColor = true;
             // 
+            // datagrid_Patients
+            // 
+            this.datagrid_Patients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagrid_Patients.Location = new System.Drawing.Point(6, 6);
+            this.datagrid_Patients.Name = "datagrid_Patients";
+            this.datagrid_Patients.Size = new System.Drawing.Size(797, 311);
+            this.datagrid_Patients.TabIndex = 1;
+            // 
             // btn_NewPatient
             // 
             this.btn_NewPatient.Location = new System.Drawing.Point(728, 323);
@@ -93,19 +102,22 @@
             this.btn_NewPatient.UseVisualStyleBackColor = true;
             this.btn_NewPatient.Click += new System.EventHandler(this.btn_NewPatient_Click);
             // 
-            // datagrid_Patients
+            // btn_Logout
             // 
-            this.datagrid_Patients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagrid_Patients.Location = new System.Drawing.Point(6, 6);
-            this.datagrid_Patients.Name = "datagrid_Patients";
-            this.datagrid_Patients.Size = new System.Drawing.Size(797, 311);
-            this.datagrid_Patients.TabIndex = 1;
+            this.btn_Logout.Location = new System.Drawing.Point(16, 397);
+            this.btn_Logout.Name = "btn_Logout";
+            this.btn_Logout.Size = new System.Drawing.Size(75, 23);
+            this.btn_Logout.TabIndex = 1;
+            this.btn_Logout.Text = "Logout";
+            this.btn_Logout.UseVisualStyleBackColor = true;
+            this.btn_Logout.Click += new System.EventHandler(this.btn_Logout_Click);
             // 
             // ReceptionistForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(841, 402);
+            this.ClientSize = new System.Drawing.Size(841, 432);
+            this.Controls.Add(this.btn_Logout);
             this.Controls.Add(this.tab_receptionist);
             this.Name = "ReceptionistForm";
             this.Text = "Receptionist";
@@ -127,5 +139,6 @@
         private System.Windows.Forms.TabPage tab_Patients;
         private System.Windows.Forms.Button btn_NewPatient;
         private System.Windows.Forms.DataGridView datagrid_Patients;
+        private System.Windows.Forms.Button btn_Logout;
     }
 }

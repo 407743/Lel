@@ -63,7 +63,7 @@ namespace FirstWorkingModel
         bool ValidatePassword(string pass)
         {
             bool validated;
-            if(pass=="password")
+            if (pass == "password")
             {
                 validated = true;
             }
@@ -73,6 +73,11 @@ namespace FirstWorkingModel
                 MessageBox.Show("Password Incorrect");
             }
             return validated;
+        }
+
+        public void ShowLogin()
+        {
+            Show();
         }
     }
 }

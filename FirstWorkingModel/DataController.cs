@@ -20,7 +20,7 @@ namespace FirstWorkingModel
             patientdataColumn.Add(new DataColumn("Date of Birth", typeof(string)));
             appointmentdataColumn.Add(new DataColumn("Time", typeof(string)));
             appointmentdataColumn.Add(new DataColumn("Patient", typeof(string)));
-            appointmentdataColumn.Add(new DataColumn("Doctor", typeof(string)));
+            appointmentdataColumn.Add(new DataColumn("Doctor/Nurse", typeof(string)));
             foreach (DataColumn d in patientdataColumn)
             {
                 DataTablePatients.Columns.Add(d);
