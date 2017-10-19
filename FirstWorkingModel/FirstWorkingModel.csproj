@@ -88,9 +88,11 @@
     <Compile Include="ReceptionistForm.Designer.cs">
       <DependentUpon>ReceptionistForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Staff.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="patients.csv" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DoctorForm.resx">

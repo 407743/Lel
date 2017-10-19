@@ -4,11 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.IO;
 
 namespace FirstWorkingModel
 {
     class DataController
     {
+        PatientController pc = PatientController.Instance();
+        
         private DataController()
         {
             List<DataColumn> patientdataColumn = new List<DataColumn>();
@@ -25,10 +28,14 @@ namespace FirstWorkingModel
             {
                 DataTablePatients.Columns.Add(d);
             }
-            foreach(DataColumn d in appointmentdataColumn)
+            foreach (DataColumn d in appointmentdataColumn)
             {
                 DataTableAppointments.Columns.Add(d);
             }
+            
+
+
+
         }
         private static DataController m_getInstance;
         private static DataTable dt_patients;
@@ -45,19 +52,19 @@ namespace FirstWorkingModel
             return m_getInstance;
         }
 
-        public DataTable getPatientData()
+        public DataTable getPatientDataTable()
         {
             return DataTablePatients;
         }
 
-        public DataTable getAppointmentData()
+        public DataTable getAppointmentDataTable()
         {
             return DataTableAppointments;
         }
 
         public void InsertPatientData()
         {
-            Patient p = PatientController.Instance().Patients[PatientController.Instance().Patients.Count - 1];
+            Patient p = pc.Patients[pc.Patients.Count - 1];
             {
                 DataTablePatients.Rows.Add(p.FirstName, p.LastName, p.DOB);
             }

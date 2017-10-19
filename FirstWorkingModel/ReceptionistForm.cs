@@ -2,21 +2,30 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace FirstWorkingModel
 {
     public partial class ReceptionistForm : Form
     {
-        LoginForm l;
-        public ReceptionistForm()
+        public LoginForm RefToLogin { get; set; }
+        public ReceptionistForm(LoginForm reflogin)
         {
+            try
+            {
+                RefToLogin = reflogin;
+            }
+            catch (Exception e)
+            {
+                Debug.Print(e.Message);
+            }
             InitializeComponent();
         }
 
         private void Receptionist_Load(object sender, EventArgs e)
         {
-            datagrid_Patients.DataSource = DataController.Instance().getPatientData();
-            datagrid_Appointments.DataSource = DataController.Instance().getAppointmentData();
+            datagrid_Patients.DataSource = DataController.Instance().getPatientDataTable();
+            datagrid_Appointments.DataSource = DataController.Instance().getAppointmentDataTable();
             datagrid_Patients.AllowUserToDeleteRows = false;
         }
 
@@ -32,7 +41,7 @@ namespace FirstWorkingModel
         private void btn_Logout_Click(object sender, EventArgs e)
         {
             Close();
-            Show();
+            RefToLogin.ShowLogin();
         }
     }
 }

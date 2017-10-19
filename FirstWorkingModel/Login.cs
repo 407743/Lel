@@ -26,7 +26,7 @@ namespace FirstWorkingModel
                 case 'p':
                     if (ValidatePassword(password))
                     {
-                        new PracticeManagerForm().Show();
+                        new PracticeManagerForm(this).Show();
                         Hide();
 
                     }
@@ -34,14 +34,14 @@ namespace FirstWorkingModel
                 case 'r':
                     if (ValidatePassword(password))
                     {
-                        new ReceptionistForm().Show();
+                        new ReceptionistForm(this).Show();
                         Hide();
                     }
                     break;
                 case 'd':
                     if (ValidatePassword(password))
                     {
-                        new DoctorForm().Show();
+                        new DoctorForm(this).Show();
                         Hide();
 
                     }
@@ -49,7 +49,7 @@ namespace FirstWorkingModel
                 case 'n':
                     if (ValidatePassword(password))
                     {
-                        new NurseForm().Show();
+                        NurseForm nuf = new NurseForm(this);
                         Hide();
 
                     }
@@ -70,7 +70,7 @@ namespace FirstWorkingModel
             else
             {
                 validated = false;
-                MessageBox.Show("Password Incorrect");
+                MessageBox.Show("Password Incorrect, please try again");
             }
             return validated;
         }

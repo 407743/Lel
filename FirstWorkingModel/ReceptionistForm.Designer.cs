@@ -44,6 +44,9 @@
             // 
             // tab_receptionist
             // 
+            this.tab_receptionist.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tab_receptionist.Controls.Add(this.tab_Appointments);
             this.tab_receptionist.Controls.Add(this.tab_Patients);
             this.tab_receptionist.Location = new System.Drawing.Point(12, 12);
@@ -65,6 +68,9 @@
             // 
             // datagrid_Appointments
             // 
+            this.datagrid_Appointments.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.datagrid_Appointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datagrid_Appointments.Location = new System.Drawing.Point(6, 6);
             this.datagrid_Appointments.Name = "datagrid_Appointments";
@@ -86,6 +92,9 @@
             // 
             // datagrid_Patients
             // 
+            this.datagrid_Patients.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.datagrid_Patients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datagrid_Patients.Location = new System.Drawing.Point(6, 6);
             this.datagrid_Patients.Name = "datagrid_Patients";
@@ -94,6 +103,7 @@
             // 
             // btn_NewPatient
             // 
+            this.btn_NewPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_NewPatient.Location = new System.Drawing.Point(728, 323);
             this.btn_NewPatient.Name = "btn_NewPatient";
             this.btn_NewPatient.Size = new System.Drawing.Size(75, 23);
@@ -104,6 +114,7 @@
             // 
             // btn_Logout
             // 
+            this.btn_Logout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_Logout.Location = new System.Drawing.Point(16, 397);
             this.btn_Logout.Name = "btn_Logout";
             this.btn_Logout.Size = new System.Drawing.Size(75, 23);
