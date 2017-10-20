@@ -30,14 +30,15 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabpage_Appointments = new System.Windows.Forms.TabPage();
-            this.tabpage_CurrentPatient = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabpage_CurrentPatient = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.btn_Next = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabpage_Appointments.SuspendLayout();
-            this.tabpage_CurrentPatient.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabpage_CurrentPatient.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,8 +64,17 @@
             this.tabpage_Appointments.UseVisualStyleBackColor = true;
             this.tabpage_Appointments.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 6);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(639, 210);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // tabpage_CurrentPatient
             // 
+            this.tabpage_CurrentPatient.Controls.Add(this.button1);
             this.tabpage_CurrentPatient.Controls.Add(this.dataGridView2);
             this.tabpage_CurrentPatient.Location = new System.Drawing.Point(4, 22);
             this.tabpage_CurrentPatient.Name = "tabpage_CurrentPatient";
@@ -74,20 +84,12 @@
             this.tabpage_CurrentPatient.Text = "Current Patient";
             this.tabpage_CurrentPatient.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(639, 210);
-            this.dataGridView1.TabIndex = 0;
-            // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(6, 6);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(639, 213);
+            this.dataGridView2.Size = new System.Drawing.Size(639, 184);
             this.dataGridView2.TabIndex = 0;
             // 
             // btn_Next
@@ -98,6 +100,15 @@
             this.btn_Next.TabIndex = 1;
             this.btn_Next.Text = "Next";
             this.btn_Next.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(528, 196);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(117, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Prescribe Medication";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // DoctorForm
             // 
@@ -110,8 +121,8 @@
             this.Text = "Doctor";
             this.tabControl1.ResumeLayout(false);
             this.tabpage_Appointments.ResumeLayout(false);
-            this.tabpage_CurrentPatient.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabpage_CurrentPatient.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
@@ -125,5 +136,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button btn_Next;
+        private System.Windows.Forms.Button button1;
     }
 }

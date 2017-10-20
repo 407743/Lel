@@ -12,16 +12,11 @@
         public string LastName { get { return m_LastName; } set { m_LastName = value; } }
         public string Password { get { return m_Password; } set { m_Password = value; } }
         public eGender Gender { get { return m_gender; } set { m_gender = value; } }
-        public Staff(string first,string last,eGender gender,string password)
-        {
-            FirstName = first;
-            LastName = last;
-        }
     }
 
     public class PracticeManager : Staff
     {
-        public PracticeManager(string first, string last,eGender gender, string password) : base(first,last,gender,password)
+        public PracticeManager(string first, string last,eGender gender, string password)
         {
 
         }
@@ -29,23 +24,32 @@
 
     public class Receptionist : Staff
     {
-        public Receptionist(string first, string last, eGender gender, string password) : base(first, last, gender, password)
+        public Receptionist(string first, string last, eGender gender, string password)
         {
 
         }
     }
 
-    public class Doctor : Staff
+    public abstract class MedStaff : Staff
     {
-        public Doctor(string first, string last, eGender gender, string password) : base(first, last, gender, password)
+        private int m_permissionLevel;
+        public virtual int PermissionLevel { get { return m_permissionLevel; } set { m_permissionLevel = value; } }
+        public abstract void PrescribeMedication();
+    }
+
+    public class Doctor : MedStaff
+    {
+        public Doctor(string first, string last, eGender gender, string password)
         {
 
         }
-    }
 
-    public class Nurse : Staff
-    {
-        public Nurse(string first, string last, eGender gender, string password) : base(first, last, gender, password)
+        public override void PrescribeMedication()
+        {
+
+        }
+
+        public void ApprovePrescriptionExtension(Prescription p)
         {
 
         }

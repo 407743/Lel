@@ -21,24 +21,15 @@ namespace FirstWorkingModel
                 using (StreamReader sr = new StreamReader(fileName))
                 {
                     string line;
-                    try
+                    while ((line = sr.ReadLine()) != null)
                     {
-                        while ((line = sr.ReadLine()) != null)
-                        {
-                            string[] fields = line.Split(';');
-                            PatientController.Instance().AddPatient(fields[0], fields[1], fields[2], fields[3], fields[4], fields[5]);
-                        }
+                        string[] fields = line.Split(';');
+                        PatientController.Instance().AddPatient(fields[0], fields[1], fields[2], fields[3], fields[4], fields[5]);
                     }
-                    catch(Exception e)
-                    {
-
-                    }
-
                 }
             }
             catch (Exception e)
             {
-                // Let the user know what went wrong.
                 Console.WriteLine("The file could not be read:");
                 Console.WriteLine(e.Message);
             }
