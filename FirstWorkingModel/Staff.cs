@@ -35,6 +35,7 @@
         private int m_permissionLevel;
         public virtual int PermissionLevel { get { return m_permissionLevel; } set { m_permissionLevel = value; } }
         public abstract void PrescribeMedication();
+
     }
 
     public class Doctor : MedStaff

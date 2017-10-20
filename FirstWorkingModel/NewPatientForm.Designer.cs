@@ -55,7 +55,7 @@
             this.txt_StreetAddress.Location = new System.Drawing.Point(106, 86);
             this.txt_StreetAddress.Name = "txt_StreetAddress";
             this.txt_StreetAddress.Size = new System.Drawing.Size(100, 20);
-            this.txt_StreetAddress.TabIndex = 1;
+            this.txt_StreetAddress.TabIndex = 3;
             // 
             // txt_Phone
             // 
@@ -69,7 +69,7 @@
             this.txt_LastName.Location = new System.Drawing.Point(106, 34);
             this.txt_LastName.Name = "txt_LastName";
             this.txt_LastName.Size = new System.Drawing.Size(100, 20);
-            this.txt_LastName.TabIndex = 3;
+            this.txt_LastName.TabIndex = 1;
             // 
             // lbl_FirstName
             // 
@@ -85,7 +85,7 @@
             this.txt_PostCode.Location = new System.Drawing.Point(106, 112);
             this.txt_PostCode.Name = "txt_PostCode";
             this.txt_PostCode.Size = new System.Drawing.Size(100, 20);
-            this.txt_PostCode.TabIndex = 5;
+            this.txt_PostCode.TabIndex = 4;
             // 
             // lbl_LastName
             // 
@@ -137,7 +137,7 @@
             this.dTP_DOB.Location = new System.Drawing.Point(225, 30);
             this.dTP_DOB.Name = "dTP_DOB";
             this.dTP_DOB.Size = new System.Drawing.Size(200, 20);
-            this.dTP_DOB.TabIndex = 11;
+            this.dTP_DOB.TabIndex = 5;
             // 
             // btn_AddPatient
             // 
